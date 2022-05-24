@@ -1,4 +1,4 @@
-package model;
+package com.example.bookapimanytomany.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

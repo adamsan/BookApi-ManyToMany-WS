@@ -1,6 +1,6 @@
-package repository;
+package com.example.bookapimanytomany.repository;
 
-import model.Author;
+import com.example.bookapimanytomany.model.Author;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
