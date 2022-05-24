@@ -1,3 +1,5 @@
+-- noinspection SqlNoDataSourceInspectionForFile
+
 insert into book values (1, 'Bible');
 insert into book values (2, 'The Decameron');
 insert into book values (3, 'The Great Gatsby');
