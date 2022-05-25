@@ -1,6 +1,7 @@
 package com.example.bookapimanytomany.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,5 +24,6 @@ public class Author {
     private String name;
 
     @OneToMany(mappedBy = "author")
+    @JsonIdentityReference(alwaysAsId = true)
     private List<Book> books;
 }
