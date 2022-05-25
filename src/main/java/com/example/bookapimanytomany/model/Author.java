@@ -19,7 +19,6 @@ public class Author {
     private int id;
     private String name;
 
-    @OneToMany
-    @JoinColumn(name = "author_id", foreignKey = @ForeignKey(name = "fk_author_book"))
+    @OneToMany(mappedBy = "author")
     private List<Book> books;
 }
