@@ -23,7 +23,8 @@ public class Author {
     private int id;
     private String name;
 
-    @OneToMany(mappedBy = "author")
+    @ManyToMany
+    @JoinTable(name="book_authorship", foreignKey = @ForeignKey(name = "fk_author_book_authorship"), inverseForeignKey = @ForeignKey(name = "fk_book_book_authorship"))
     @JsonIdentityReference(alwaysAsId = true)
     private List<Book> books;
 }

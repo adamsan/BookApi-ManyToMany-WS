@@ -1,6 +1,7 @@
 package com.example.bookapimanytomany.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -8,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -21,8 +23,8 @@ public class Book {
     private int id;
     private String title;
 
-    @ManyToOne
-    @JoinColumn(name = "author_id", foreignKey = @ForeignKey(name = "fk_author_book"))
-    private Author author;
+    @ManyToMany(mappedBy = "books")
+    @JsonIdentityReference(alwaysAsId = true)
+    private List<Author> author;
 
 }
