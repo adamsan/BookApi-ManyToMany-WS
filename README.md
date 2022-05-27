@@ -58,3 +58,6 @@ Author:
 ### 6. Can you research what the famous 'N+1 query problem' is? *(Optional)*
 - Can you see it in this project?
 - Can you fix it?
+
+### 7. Document your API with Swagger
+- Start [HERE](https://springdoc.org/)
