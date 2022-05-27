@@ -10,15 +10,10 @@ import java.util.List;
 
 @Repository
 public interface BookDAO extends JpaRepository<Book, Integer> {
-// // Doesn't work, runs this query, then n+1
-//    @Query(value = """
-//            select * from
-//            book b
-//            join book_authorship ba on b.id = ba.books_id
-//            join author a on ba.author_id = a.id
-//            """, nativeQuery = true)
-//    List<Book> findAllX();
 
-    @EntityGraph(value = "book_authorship_graph", type = EntityGraph.EntityGraphType.FETCH)
+    @Query("select distinct b from Book b left join fetch b.author a")
+//    @EntityGraph(value = "book_authorship_graph", type = EntityGraph.EntityGraphType.FETCH)
     List<Book> findAll();
+
+    Book save(Book book);
 }
