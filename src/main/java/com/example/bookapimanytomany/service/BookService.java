@@ -20,4 +20,8 @@ public class BookService {
     public Optional<Book> findById(Integer id) {
         return bookDAO.findById(id);
     }
+
+    public Book save(Book book) {
+        return bookDAO.save(book);
+    }
 }

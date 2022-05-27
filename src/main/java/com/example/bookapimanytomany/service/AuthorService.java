@@ -21,4 +21,8 @@ public class AuthorService {
     public Optional<Author> findById(Integer id) {
         return authorDAO.findById(id);
     }
+
+    public Author save(Author author) {
+        return authorDAO.save(author);
+    }
 }
