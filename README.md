@@ -59,5 +59,11 @@ Author:
 - Can you see it in this project?
 - Can you fix it?
 
-### 7. Document your API with Swagger
+### 7. Add an endpoint to save new books, authors
+- Add `save` to service
+- Add `@PostMapping` handling method to controllers
+- How can you handle adding authors to books and vica versa?
+- Use Postman to send randomly books with randomly generated titles, and authors with random names
+
+### 8. Document your API with Swagger
 - Start [HERE](https://springdoc.org/)
