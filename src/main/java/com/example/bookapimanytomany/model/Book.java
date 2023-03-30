@@ -1,5 +1,6 @@
 package com.example.bookapimanytomany.model;
 
+import com.example.bookapimanytomany.controller.validators.NoSingleWord;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
@@ -25,6 +26,7 @@ public class Book {
     private Integer id;
 
     @NotBlank
+    @NoSingleWord
     private String title;
 
     @ManyToMany(mappedBy = "books")

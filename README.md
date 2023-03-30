@@ -87,6 +87,13 @@ Author:
 ### 12. Add validation
 - add validation dependency
 - use a validation annotation on the title of the `Book` entity
-- validate incoming `POST`-s for new books, explore different ways to handle validation errors
+- validate incoming `POST`-s for new books, explore different ways to handle validation errors (3 ways came up already)
 - settle with the solution using the `@ExceptionHandler` annotations
 - in the json response, send the number of errors, with the name of the fields with their validation messages
+- add custom error message for this field
+- create a custom validator `NoSingleWord`, that disallows adding a String with a single word
+- allow only multiple word titles for `Book` entity 
+
+### 13. Add i18n
+- [spring documentation](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#features.internationalization)
+- [stackoverflow](https://stackoverflow.com/questions/55220453/how-to-i18n-a-spring-restcontroller-on-java-validation-constraints)
