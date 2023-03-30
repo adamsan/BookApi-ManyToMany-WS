@@ -87,4 +87,6 @@ Author:
 ### 12. Add validation
 - add validation dependency
 - use a validation annotation on the title of the `Book` entity
-- validate incoming POSTS for new books, explore different ways to handle validation errors
+- validate incoming `POST`-s for new books, explore different ways to handle validation errors
+- settle with the solution using the `@ExceptionHandler` annotations
+- in the json response, send the number of errors, with the name of the fields with their validation messages
