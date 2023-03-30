@@ -67,3 +67,19 @@ Author:
 
 ### 8. Document your API with Swagger
 - Start [HERE](https://springdoc.org/)
+
+### 9. Add DELETE book endpoints
+
+### 10. Test it with Postman
+- send GET for /books
+- test if status is 200
+- save response length
+- send DELETE /book/{id}
+- send GET for /books
+- check response length is smaller than before
+
+### 11. Test from command line
+- install npm
+- install newman as global dependency
+- export collection from Postman
+- run it with newman

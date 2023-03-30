@@ -24,4 +24,13 @@ public class BookService {
     public Book save(Book book) {
         return bookDAO.save(book);
     }
+
+    public void deleteById(Integer id) {
+        bookDAO.findById(id)
+                        .ifPresent(b -> {
+                            b.setAuthor(null);
+                            bookDAO.save(b);
+                        });
+        bookDAO.deleteById(id);
+    }
 }
