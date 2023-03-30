@@ -83,3 +83,8 @@ Author:
 - install newman as global dependency
 - export collection from Postman
 - run it with newman
+
+### 12. Add validation
+- add validation dependency
+- use a validation annotation on the title of the `Book` entity
+- validate incoming POSTS for new books, explore different ways to handle validation errors
